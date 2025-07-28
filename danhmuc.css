@@ -1,0 +1,269 @@
+.maincontent{
+    border: 1px solid #ffffff;
+    height: auto;
+    width: 100%;
+    float:left;
+    border-radius: 10px;
+    margin:auto;
+}
+.list_product{
+    display:inline-flex;
+    flex-wrap: wrap;
+    
+}
+.list_product .item{
+    flex-basis: 23%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  
+}
+.list_product .img_item{
+    max-width: 100%;
+    height: auto;
+   
+}
+
+.img_item{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border: 1px solid #9BBEC8;
+    border-radius: 10px;
+  
+}
+
+.photo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    opacity: 1.0;
+    transition: 0.25s ease-in-out;
+    border-radius: 10px;
+
+}
+
+.photo:hover{
+    border-radius: 10px;
+    opacity: 1.0;
+}
+.add_like a.add_product {
+    position: absolute;
+    left: 10px;
+    top: -21px;
+    
+}
+
+.add_like a.like_product{
+    position: absolute;
+    right: 10px;
+    top: -21px;
+   
+}
+
+.list_product div:hover .add_like a.like_product, .list_product div:hover .add_like a.add_product{
+    top: 10px;
+    z-index: 1;
+}
+
+.list_product .item .product_top{
+    position: relative;
+    overflow: hidden;
+  
+}
+
+.list_product .item .product_top .img_item{
+    display: block; /*(2)Để hiển thị không gian bao phủ*/
+  
+}
+
+.list_product .item .product_top .img_item img{
+    display: block; /*(1)Bỏ khoảng trảng giữa hình ảnh sản phẩm và chữ Thêm vào giỏ hàng*/
+  
+}
+
+.list_product .item .product_top a.buynow {
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    background-color: black;
+    color:#fff;
+    padding: 10px 0px;
+    position: absolute;
+    width: 100%;
+    bottom: -65px;
+  
+    cursor: pointer;
+    user-select: none;
+    
+    
+}
+
+.list_product .item:hover .product_top .buynow{
+    bottom: 0px;
+ 
+}
+
+.item:hover .product_top{
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}
+.infor {
+    padding: 5px 0px;
+}
+
+.infor p{
+    text-align: center;
+}
+
+.name_product {
+    color: #3348;
+}
+
+.price {
+    padding: 2px 0px;
+    font-weight: 600;
+} 
+/*---chi tiết sản phẩm--*/
+.wrapper_sanpham{
+    
+    margin-top: 50px;
+    height: auto ;
+    width:100%;
+}
+.hinhanh_sanpham{
+    float:left;
+    width:40%;
+    margin-left: 30px;
+
+}
+.chitiet_sanpham{
+    float: right;
+    width: 45%;
+    margin-top: 20px;
+    
+}
+
+.themgiohang {
+    padding: 12px 24px;
+    background-color: #DDF2FD;
+    color: #164863;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+}
+.title_giohang{
+    font-size: large;
+    color: #164863;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.fa-plus-circle{
+    color:#9BBEC8;
+    font-size: 20px;
+}
+.fa-minus-circle{
+    color:#164863;
+    font-size: 20px;
+}
+i.fa-minus-circle:hover {
+    color:#FF9D3D;
+}
+i.fa-plus-circle:hover {
+    color:#CEDF9F;
+}
+.xoa{
+    background:#BCD2EE;
+    color:#573321;
+    border-radius: 5px;
+    padding:5px 15px ;
+    
+}
+.xoa:hover{
+    color: #DEAC80;
+}
+.xoatatca{
+    color: #1A3636;
+    background:#DEF2F1;
+    border-radius: 5px;
+    padding:10px 25px ;
+}
+.xoatatca:hover{
+    color: #DEAC80;
+}
+/*chuyển giỏ hàng*/
+ /*--test---*/
+ .container-next{
+    margin-bottom: 30px;
+}
+
+.arrow-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.arrow-steps .step {
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 8px;
+    width: 20%;
+    background-color: #ddd;
+    border-radius: 4px;
+    user-select: none;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-steps .step:hover {
+    background-color: #cccccc;
+    transform: translateY(-2px);
+}
+
+.arrow-steps .step.current {
+    background-color: #5599e5;
+}
+
+.arrow-steps .step.done {
+    background-color: #2f69aa;
+}
+a{
+    color:#000000;
+    
+}
+.arrow-steps .step span {
+    position: relative;
+}
+
+.nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.nav .prev, .nav .next {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #5599e5;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav .prev:hover, .nav .next:hover {
+    background-color: #4179c5;
+    transform: translateY(-2px);
+}
+
+.nav .prev:active, .nav .next:active {
+    transform: translateY(0);
+}

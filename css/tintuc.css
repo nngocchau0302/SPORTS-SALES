@@ -1,0 +1,394 @@
+
+.body{
+    margin:0;
+    padding:0;
+}
+
+
+header {
+  font-family: 'Segoe UI', sans-serif;
+    /* text-wrap: nowrap; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #548B54;
+    padding: 10px 20px;
+    transition: all 0.5s ease-in-out; /*làm chậm*/
+    z-index: 1000; 
+    background: #ffffff;
+} /*nav cố định khi lướt*/
+
+header div.cart i {
+    color: white;
+}
+
+header.sticky div.cart i {
+    color: black;
+}
+
+header.sticky{
+    background: #fff;
+    opacity: 0.9; /*độ trong suốt */
+    box-shadow: 0 0 10px black;
+    z-index: 2;
+}
+
+header.sticky #logo {
+    color: black;
+}
+
+
+
+header #header_item {
+    margin: 9px 0px;
+}
+
+header #header_item a{
+    /* color: white; */
+    margin: 9px 0px;
+}
+
+header.sticky #header_item a{
+    color: black;
+}
+
+
+header #menu a:hover{
+    color: #164863;
+    /* transform: scale(1.1);
+    transition: 0.25s; */
+    /* border-bottom: 2px solid brown; */
+    /* cursor: pointer hiện bàn tay */
+}
+/*Đường chạy dưới chân nav*/
+header #menu a{
+    position: relative;
+    margin:  20px;
+    color:#164863;
+    font-size: 20px;
+}
+
+header #menu a:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: auto;
+    right: 0;
+    width: 0;
+    height: 100%;
+    border-bottom: 1px solid #164863;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+header #menu a:hover:before{
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+#menu li{
+    position: relative;
+}#menu li {
+    width: 100%;
+}
+
+.inner-header {
+    align-items: center !important;
+    display: flex;
+    flex-wrap: wrap;
+     width: 100%;
+    justify-content: flex-start; /*Tạo khoảng trống đều giữa 2 phần tử con*/
+}
+
+
+#logo {
+     margin-right: 20px;
+    color: #4b5b2b;
+    text-transform: uppercase;
+    display:flex;
+    flex-direction: column; /* Chia cột, để slogan-text nằm dưới logo-text */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-align: center;/* Căn giữa nội dung */
+}
+
+#logo:hover .logo-text, #logo:hover .logo-slogan{
+    /* background-image: linear-gradient(to top left, red, yellow); */
+    /* text-shadow:     box-shadow: 0 0 10px black; */
+    transition: .25 /*ease-in-out*/ ;
+}
+.logo-text{
+    text-decoration: underline;
+}
+#logo .logo-text {
+    font-weight: bold; /*Độ đậm logo*/
+    font-size: 1.5rem;
+    letter-spacing: 3px; /*Khoảng cách giữa các chữ*/
+}
+
+#logo .logo-slogan {
+    font-weight:bold;
+    font-size: 0.75rem; 
+}
+
+ul#menu{
+    display: flex;
+     margin-left: 20px; /* Khoảng cách bên trái cho menu */
+}
+
+ul#menu a{
+    text-transform: uppercase;
+    padding: 10px 20px;
+    color: #fff;
+    display: block;
+}
+
+
+
+header.sticky{
+    background: #fff;
+    opacity: 0.9; /*độ trong suốt */
+    box-shadow: 0 0 10px black;
+    z-index: 2;
+}
+/*----search---*/
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 5px 50px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+}
+
+.search-container button {
+    background-color: #727162;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.user-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user-icon i {
+   
+    font-size: 24px;
+    color: #555;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.user-icon:hover .dropdown-content {
+    display: block;
+}
+/*---giỏ hàng---*/
+
+header div.cart i {
+    color: #133717;
+}
+.cart {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -13px;
+    padding: 0 5px;
+    background-color: orange;
+    border-radius: 50%;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "sidebar main main"
+    "sidebar main main" ;
+   
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+.sidebar{
+    margin-right: 50px;
+    grid-area: sidebar;
+}
+.sidebar li{
+    padding: 10px;
+}
+.sidebar a:link{
+    color: black;
+}
+.sidebar a:hover{
+    font-weight: 500;
+}
+
+.content{
+    margin-top: 10px;
+    grid-area: main;
+}
+.content img{
+    width: 550px;
+    height: auto;
+    padding: 10px;
+}
+.content a:hover{
+    color: red;
+}
+.content a:active{
+    color: green;
+}
+
+.content_detail{
+    margin-top: 10px;
+}
+.content_detail h2,p {
+    padding-left: 10px;
+}
+ .content_detail img :hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+#Slider{
+    padding-bottom: 20px;
+    /* border-bottom: 2px solid #000; */
+    margin: 40px;
+    overflow: hidden;
+}
+#Slider img{
+    width: 250px;
+    height: 500px;
+}
+
+/*---footer--*/
+ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .overlay{
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #515b34;
+    color: #fff;
+
+  }
+  .footer a{
+    color: white;
+    position: relative;
+  }
+  
+  .footer a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    height: 100%;
+    width: 0;
+    border-bottom: 3px solid white;
+    transition: 0.5s;
+  }
+  
+  .footer a:hover:before{
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+  .aboutus{
+    margin-left: 0px;
+  }
+  .aboutus p {
+    padding-top: 10px;
+  }
+  .aboutus h2{
+    padding-left: 5px;
+  }
+  .sale_list li{
+    padding-top: 10px ;
+  }
+  .sale_list li:hover{
+    color: black;
+  }
+  .direction_list li{
+    padding-top: 10px;
+  }
+  .direction_list li:hover{
+    color: black ;
+  }
+  .enter{
+    padding-bottom: 40px;
+  }
+  .enter p {
+    padding-top: 10px;
+  }
+  .enter form{
+    padding-left: 10px;
+    color:#fff
+  }
+  .enter input{
+    
+    border: none;
+    border-bottom: solid;
+    color: #fff;
+    width: 50%;
+    height: auto;
+    background-color: rgba(208, 216, 126, 0);
+  }
+  .enter button{
+    width: 80px;
+    height: 30px;
+    color:black;
+  }
+  .pay_icon svg{
+    width: 60px;
+    height: 30px;
+    padding-right: 30px;
+  }
+  
+
+.footer{
+    border: 1px solid #060606;
+    height: auto;
+    width:100%;
+
+}
+

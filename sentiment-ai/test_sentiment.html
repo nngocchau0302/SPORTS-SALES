@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Test AI Phân Tích Cảm Xúc</title>
+</head>
+<body>
+  <h2>Nhập bình luận:</h2>
+  <textarea id="comment" rows="4" cols="50"></textarea><br><br>
+  <button onclick="sendComment()">Gửi và phân tích</button>
+
+  <h3>Kết quả:</h3>
+  <div id="result">...</div>
+
+  <script>
+    function sendComment() {
+      const comment = document.getElementById("comment").value;
+
+      fetch("http://localhost:5000/api/sentiment", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ comment: comment })
+      })
+      .then(response => response.json())
+      .then(data => {
+        const probabilityPercent = (data.probability * 100).toFixed(2);
+        document.getElementById("result").innerHTML = `
+          🧠 AI cảm xúc: <strong>${data.sentiment}</strong><br>
+          📊 Điểm đánh giá: <strong>${probabilityPercent}%</strong>
+        `;
+      })
+      .catch(error => {
+        console.error("Lỗi:", error);
+        document.getElementById("result").innerText = "❌ Không gọi được API!";
+      });
+    }
+  </script>
+</body>
+</html>

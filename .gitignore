@@ -1,0 +1,29 @@
+# Môi trường ảo Python
+venv/
+rasa-env/
+__pycache__/
+*.pyc
+
+# Cache và model của Rasa
+.rasa/
+models/
+
+# Thư viện nặng
+**/site-packages/
+*.pyd
+*.dll
+*.lib
+*.so
+*.h5
+*.pkl
+
+# Cấu hình / bí mật
+.vscode/
+.env
+/vendor/
+config.php
+venv/
+.venv/
+env/
+rasa-env/
+**/site-packages/

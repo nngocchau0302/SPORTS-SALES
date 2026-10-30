@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+  :root {
+    --primary-color: #2c332a;
+    --primary-color-light: #2e2d2d;
+    --secondary-color: #ffffff;
+    --text-dark: #1f1f20;
+    --text-light: #030303;
+    --white: #ffffff;
+    --max-width: 1200px;
+  }
+  
+
+  .maincontent{
+    background: url(/images/AD1.png);
+    border: 1px solid #ffffff;
+    height: 890px;
+    width:100%;
+    float:right;
+    border-radius: 10px;
+    margin:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+  .containerContent {
+    margin-top: 50px;
+    width: 100%;
+    padding-block: 2rem;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+  
+  .containerContent h1 {
+    margin-left: 7%;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  .containerContent form {
+    display: grid;
+    gap: 10px;
+  }
+  .containerContent label {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+  }
+  .inputRow {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+  }
+  .containerContent input {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: transparent;
+  }
+  .containerContent input::placeholder {
+    color: var(--text-dark);
+  }
+
+  .containerContent button {
+    max-width: 50%;
+    margin-left: 25%;
+    margin-block: 1rem 2rem;
+    padding: 0.75rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+  }
+  .containerContent button:hover {
+    background-color: var(--primary-color-light);
+  }
+  .containerContent h6 {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    text-align: center;
+  }
+  .logins {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .logins a {
+    padding: 0.5rem 2.5rem;
+    border: 2px solid var(--text-dark);
+    border-radius: 5rem;
+  }
+  .logins a:hover {
+    background: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+  }
+  .logins img {
+    display: flex;
+    max-width: 20px;
+  }
+  .containerContent p {
+    color: var(--text-light);
+    text-align: center;
+  }
+  .containerContent p a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #164863;
+  }
+
+ 
+  
+  .overlay{
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #164863;
+    color: #DDF2FD;
+
+  }
+  .footer a{
+    color: white;
+    position: relative;
+  }
+  
+  .footer a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    height: 100%;
+    width: 0;
+    border-bottom: 3px solid white;
+    transition: 0.5s;
+  }
+  
+  .footer a:hover:before{
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+  .aboutus{
+    margin-left: 0px;
+    
+  }
+  .aboutus p {
+    padding-top: 10px;
+    margin-top: 15px;
+  }
+  .aboutus h2{
+    padding-left: 5px;
+  }
+  .sale_list li{
+    padding-top: 10px ;
+  }
+  .sale_list li:hover{
+    color: black;
+  }
+  .direction_list li{
+    padding-top: 10px;
+  }
+  .direction_list li:hover{
+    color: black ;
+  }
+  .enter{
+    padding-bottom: 40px;
+    margin-top: 38px;
+  }
+  .enter p {
+    padding-top: 10px;
+    margin-top: 15px;
+  }
+  .enter form{
+    padding-left: 10px;
+    color:#fff
+  }
+  .enter input{
+    margin-top: 15px;
+    border: none;
+    border-bottom: solid;
+    color: #fff;
+    width: 50%;
+    height: auto;
+    background-color: rgba(208, 216, 126, 0);
+  }
+  .enter button{
+    width: 80px;
+    height: 30px;
+    color:black;
+  }
+  .pay_icon svg{
+    width: 60px;
+    height: 30px;
+    padding-right: 30px;
+    margin-top: 15px;
+  }
+  
+
+  .footer{
+    border: 1px solid #060606;
+    height: auto;
+    width:100%;
+    margin-top: 1px;
+}
+
+
+

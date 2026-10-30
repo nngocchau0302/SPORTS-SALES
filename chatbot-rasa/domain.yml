@@ -1,0 +1,82 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_cheapest_product
+  - ask_most_expensive_product
+  - ask_products_under_500k
+  - ask_best_seller
+  - ask_promotion
+  - ask_best_product
+  - ask_newest_product
+  - ask_shipping_fee
+  - ask_store_address
+  - ask_payment_methods
+  - ask_warranty
+  
+actions:
+ - action_cheapest_product
+ - action_most_expensive_product
+ - action_products_under_500k
+ - action_best_seller
+ - action_promotion_products
+ - action_best_product
+ - action_ask_newest_product
+
+entities:
+  - ten_san_pham
+
+
+responses:
+  utter_ask_shipping_fee:
+    - text: "Phí vận chuyển tùy thuộc vào địa chỉ giao hàng. Ở TP.Cần Thơ phí là 10.000đ, các khu vực khác từ 30.000đ trở lên."
+
+  utter_ask_store_address:
+    - text: "Cửa hàng của chúng tôi tại: 162 Đ. Nguyễn Văn Cừ, Phường An Khánh, Ninh Kiều, Cần Thơ, Việt Nam."
+
+  utter_ask_payment_methods:
+    - text: "Chúng tôi hỗ trợ thanh toán qua tiền mặt khi nhận hàng, chuyển khoản VNPAY và ví MoMo."
+
+  utter_ask_warranty:
+    - text: "Các sản phẩm như vợt cầu lông được bảo hành 12 tháng. Vui lòng giữ lại mã seri để được hỗ trợ."
+
+  utter_greet:
+    - text: "Chào bạn! Rất vui được hỗ trợ."
+    - text: "Xin chào! Tôi có thể giúp gì cho bạn hôm nay?"
+    - text: "Hi there! Có điều gì bạn đang cần tư vấn không?"
+
+  utter_cheer_up:
+    - text: "Cố lên nhé! Hãy nhìn cái này để thấy vui hơn!"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Bạn thấy điều đó có hữu ích không?"
+    - text: "Thông tin đó có giúp ích cho bạn chứ?"
+    - text: "Hy vọng điều đó hữu ích. Bạn còn cần gì nữa không?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+    - text: "Tuyệt vời, chúc bạn một ngày vui vẻ!"
+    - text: "Vui quá! Nếu cần gì thêm, cứ nhắn nhé!"
+    - text: "Thật tuyệt khi nghe điều đó từ bạn!"
+
+  utter_goodbye:
+    - text: "Bye"
+    - text: "Tạm biệt! Hẹn gặp lại bạn sau nhé!"
+    - text: "Chúc bạn một ngày tốt lành!"
+    - text: "Hẹn gặp lại bạn trong lần trò chuyện tới!"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+    - text: "Tôi là trợ lý ảo được xây dựng bởi Rasa."
+    - text: "Tôi là chatbot sử dụng trí tuệ nhân tạo, rất vui được hỗ trợ bạn!"
+    - text: "Đúng vậy, tôi là bot, nhưng tôi sẽ cố gắng giúp bạn như một người thật!"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

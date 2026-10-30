@@ -1,0 +1,90 @@
+version: "3.1"
+
+
+stories:
+  - story: Người dùng hỏi sản phẩm rẻ nhất
+    steps:
+      - intent: ask_cheapest_product
+      - action: action_cheapest_product
+
+  - story: Người dùng hỏi sản phẩm đắt nhất
+    steps:
+      - intent: ask_most_expensive_product
+      - action: action_most_expensive_product
+
+  - story: Người dùng hỏi sản phẩm dưới 500k
+    steps:
+      - intent: ask_products_under_500k
+      - action: action_products_under_500k
+      
+  - story: Người dùng hỏi sản phẩm bán chạy
+    steps:
+      - intent: ask_best_seller
+      - action: action_best_seller
+
+  - story: Người dùng hỏi sản phẩm khuyến mãi
+    steps:
+      - intent: ask_promotion
+      - action: action_promotion_products
+
+  - story: Người dùng hỏi sản phẩm tốt nhất
+    steps:
+      - intent: ask_best_product
+      - action: action_best_product
+
+  # - story: Người dùng hỏi sản phẩm yêu thích
+  #   steps:
+  #     - intent: ask_favorite_product
+  #     - action: action_most_favorite_product
+  - story: sản phẩm mới nhất
+    steps:
+      - intent: ask_newest_product
+      - action: action_ask_newest_product
+
+  - story: hỏi phí vận chuyển
+    steps:
+      - intent: ask_shipping_fee
+      - action: utter_ask_shipping_fee
+
+  - story: hỏi địa chỉ cửa hàng
+    steps:
+      - intent: ask_store_address
+      - action: utter_ask_store_address
+
+  - story: hỏi phương thức thanh toán
+    steps:
+      - intent: ask_payment_methods
+      - action: utter_ask_payment_methods
+
+  - story: hỏi chính sách bảo hành
+    steps:
+      - intent: ask_warranty
+      - action: utter_ask_warranty
+
+  - story: happy path
+    steps:
+     - intent: greet
+     - action: utter_greet
+     - intent: mood_great
+     - action: utter_happy
+
+  - story: sad path 1
+    steps:
+     - intent: greet
+     - action: utter_greet
+     - intent: mood_unhappy
+     - action: utter_cheer_up
+     - action: utter_did_that_help
+     - intent: affirm
+     - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+

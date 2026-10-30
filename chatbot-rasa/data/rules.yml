@@ -1,0 +1,54 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+
+- rule: Trả lời sản phẩm rẻ nhất
+  steps:
+    - intent: ask_cheapest_product
+    - action: action_cheapest_product
+
+- rule: Trả lời sản phẩm đắt nhất
+  steps:
+    - intent: ask_most_expensive_product
+    - action: action_most_expensive_product
+
+- rule: Trả lời sản phẩm dưới 500k
+  steps:
+    - intent: ask_products_under_500k
+    - action: action_products_under_500k
+
+- rule: Trả lời câu hỏi về sản phẩm mới nhất
+  steps:
+    - intent: ask_newest_product
+    - action: action_ask_newest_product
+
+- rule: Trả lời câu hỏi phí vận chuyển
+  steps:
+    - intent: ask_shipping_fee
+    - action: utter_ask_shipping_fee
+
+- rule: Trả lời câu hỏi địa chỉ cửa hàng
+  steps:
+    - intent: ask_store_address
+    - action: utter_ask_store_address
+
+- rule: Trả lời câu hỏi phương thức thanh toán
+  steps:
+    - intent: ask_payment_methods
+    - action: utter_ask_payment_methods
+
+- rule: Trả lời câu hỏi bảo hành
+  steps:
+    - intent: ask_warranty
+    - action: utter_ask_warranty

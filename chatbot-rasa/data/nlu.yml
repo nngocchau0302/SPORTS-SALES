@@ -1,0 +1,282 @@
+version: "3.1"
+
+nlu:
+# Hỏi về sản phẩm mới nhất
+- intent: ask_newest_product
+  examples: |
+    - Sản phẩm mới nhất là gì
+    - Sản phẩm nào mới nhất
+    - Có sản phẩm mới nào không
+    - Shop vừa nhập hàng mới gì không
+    - Tôi muốn xem sản phẩm mới
+    - Gợi ý sản phẩm mới nhất
+    - Tôi muốn hỏi sản phẩm mới nhất
+    - shop có hàng mới không?
+    - cho tôi xem sản phẩm mới về
+    - có sản phẩm nào vừa nhập về không?
+    - hàng nào mới về vậy?
+    - bạn có mặt hàng mới nào không?
+    - giới thiệu sản phẩm mới nhất đi
+    - sản phẩm mới nhất bạn đang bán là gì?
+    - hiện tại có mặt hàng nào mới không?
+    - sản phẩm nào vừa ra mắt bên shop?
+    - có gì mới không?
+    - tôi muốn xem sản phẩm mới về
+
+#  Hỏi về phí vận chuyển
+- intent: ask_shipping_fee
+  examples: |
+    - Phí vận chuyển là bao nhiêu
+    - Tôi muốn hỏi về phí vận chuyển
+    - Tính phí giao hàng như thế nào
+    - Giao hàng có mất phí không
+    - Có miễn phí ship không
+    - Vận chuyển tính như thế nào
+
+#  Hỏi về địa chỉ cửa hàng
+- intent: ask_store_address
+  examples: |
+    - Địa chỉ cửa hàng là gì
+    - Shop ở đâu vậy
+    - Tôi muốn biết địa chỉ cửa hàng
+    - Cửa hàng đặt ở đâu
+    - Shop có cửa hàng vật lý không
+
+#  Hỏi về phương thức thanh toán
+- intent: ask_payment_methods
+  examples: |
+    - Tôi muốn hỏi phương thức thanh toán
+    - Tôi muốn hỏi có các hình thức thanh toán nào
+    - Có các hình thức thanh toán nào
+    - Có những phương thức thanh toán nào
+    - Tôi có thể thanh toán bằng MoMo không
+    - Shop có hỗ trợ chuyển khoản không
+    - Có thanh toán khi nhận hàng không
+    - Các hình thức thanh toán là gì
+
+#  Hỏi về chính sách bảo hành
+- intent: ask_warranty
+  examples: |
+    - Sản phẩm có bảo hành không
+    - Thời gian bảo hành bao lâu
+    - Sản phẩm nào có bảo hành
+    - Bảo hành như thế nào
+    - Có hỗ trợ bảo hành không
+    - Bảo hành sản phẩm ra sao
+
+
+- intent: ask_cheapest_product
+  examples: |
+    - Sản phẩm nào rẻ nhất
+    - Sản phẩm rẻ nhất là gì
+    - Sản phẩm rẻ nhất
+    - Mặt hàng nào đang có giá thấp nhất vậy?
+    - Có sản phẩm nào giá rẻ không?
+    - Tôi muốn biết sản phẩm rẻ nhất
+    - Có sản phẩm nào giá thấp nhất không?
+    - Có gì dưới giá thấp không
+    - Món nào giá rẻ nhất
+    - Tôi muốn mua sản phẩm rẻ nhất, có không?
+    - Gợi ý cho tôi sản phẩm rẻ nhất với
+    - Tôi đang tìm sản phẩm giá rẻ nhất
+    - Trong cửa hàng thì sản phẩm nào rẻ nhất?
+    - Cho biết sản phẩm giá thấp nhất
+
+- intent: ask_most_expensive_product
+  examples: |
+    - Sản phẩm nào đắt nhất
+    - Sản phẩm đắt nhất
+    - Sản phẩm mắc nhất
+    - Sản phẩm nào mắc nhất
+    - Cái gì mắc nhất
+    - Cho biết sản phẩm giá cao nhất
+    - Sản phẩm nào có giá cao nhất vậy?
+    - Mặt hàng nào đang bán với giá cao nhất?
+    - Hàng nào đắt nhất hiện tại?
+    - Tôi muốn biết sản phẩm mắc nhất
+    - Sản phẩm nào đang bán mắc nhất shop?
+    - Shop có sản phẩm nào mắc tiền nhất?
+    - Cái nào có giá cao nhất trong cửa hàng?
+    - Mặt hàng nào là cao cấp nhất?
+    - Sản phẩm nào là hàng cao cấp nhất?
+    - Sản phẩm nào có giá tiền lớn nhất?
+    - Sản phẩm nào sang trọng và giá cao nhất?
+    - Cho tôi biết món hàng đắt tiền nhất
+    - Cái nào là VIP nhất bên shop?
+
+- intent: ask_products_under_500k
+  examples: |
+    - Có sản phẩm nào dưới 500k không
+    - Dưới 500 nghìn có gì không
+    - Có gì rẻ dưới 500 không
+
+- intent: ask_best_seller
+  examples: |
+    - Sản phẩm nào bán chạy nhất
+    - Sản phẩm nào được mua nhiều nhất
+    - Mặt hàng nào hot nhất
+    - Cho tôi biết sản phẩm bán nhiều nhất
+    - sản phẩm nào đang bán chạy nhất?
+    - mặt hàng nào được mua nhiều nhất?
+    - sản phẩm nào đang hot nhất?
+    - bên bạn có sản phẩm nào bán chạy không?
+    - cho tôi biết sản phẩm bán chạy hiện tại
+    - sản phẩm nào đang được khách chuộng nhất?
+    - mẫu nào đang hot?
+    - mặt hàng nào đang được ưa chuộng nhất?
+    - sản phẩm bán chạy của shop là gì?
+    - hàng nào đang bán chạy?
+    - tôi muốn xem sản phẩm bán chạy nhất
+    - hiện tại sản phẩm nào bán chạy?
+    - cho tôi gợi ý sản phẩm bán chạy
+    - bạn có thể giới thiệu sản phẩm hot nhất không?
+    - sản phẩm nào đang bán nhiều nhất vậy?
+    - cho tôi xem những sản phẩm bán chạy
+    - mặt hàng nào được mua nhiều gần đây?
+    - sản phẩm nào đang hot trend?
+    - sản phẩm hot nhất trong tuần là gì?
+    - sản phẩm nào được đánh giá cao và bán chạy?
+
+
+- intent: ask_promotion
+  examples: |
+    - Sản phẩm nào đang khuyến mãi?
+    - Có sản phẩm nào đang giảm giá không?
+    - Mặt hàng nào đang có ưu đãi?
+    - Sản phẩm nào được khuyến mãi nhiều nhất?
+    - Shop đang có khuyến mãi gì không?
+    - Cho tôi biết các sản phẩm đang giảm giá
+    - Có chương trình giảm giá nào hôm nay không?
+    - Sản phẩm nào giảm giá sâu nhất?
+    - Có khuyến mãi nào hấp dẫn không?
+    - Những mặt hàng nào đang sale?
+    - Tôi muốn xem hàng đang khuyến mãi
+    - Mặt hàng nào đang được giảm giá tốt?
+    - Gợi ý vài sản phẩm khuyến mãi giúp tôi
+    - Các sản phẩm nào đang có deal tốt?
+    - Hiện tại có ưu đãi nào không?
+    - Có sản phẩm nào sale đặc biệt không?
+    - Sản phẩm nào có khuyến mãi trong tuần này?
+    - Giảm giá cho sản phẩm nào nhiều nhất?
+    - Có voucher hay mã giảm giá nào không?
+    - Sản phẩm nào đang khuyến mãi dịp này?
+
+
+- intent: ask_best_product
+  examples: |
+    - Sản phẩm tốt nhất là gì
+    - Mặt hàng nào tốt nhất
+    - Sản phẩm nào chất lượng cao nhất
+    - Cho biết sản phẩm tốt nhất
+    - Sản phẩm nào đáng mua nhất hiện nay?
+    - Mặt hàng nào được đánh giá cao nhất?
+    - Sản phẩm nào được nhiều người yêu thích nhất?
+    - Cho tôi biết mặt hàng có chất lượng tốt nhất
+    - Gợi ý cho tôi sản phẩm tốt nhất trong cửa hàng
+    - Sản phẩm nào đang được đánh giá 5 sao?
+    - Có sản phẩm nào nổi bật về chất lượng không?
+    - Tôi muốn biết sản phẩm nào bán chạy và chất lượng tốt
+    - Hàng nào là hàng đầu về chất lượng?
+    - Mặt hàng nào được khách hàng phản hồi tích cực nhất?
+    - Sản phẩm nào được khuyên dùng nhiều nhất?
+    - Sản phẩm chất lượng cao nhất là gì?
+    - Trong cửa hàng, sản phẩm nào tốt nhất?
+    - Có sản phẩm nào được nhiều người mua và đánh giá tốt không?
+    - Sản phẩm nào nổi bật nhất về tính năng và độ bền?
+# - intent: ask_favorite_product
+#   examples: |
+#     - Sản phẩm yêu thích nhất là gì
+#     - Mặt hàng được yêu thích nhất
+#     - Người dùng thích sản phẩm nào nhất
+#     - Sản phẩm nào được đánh giá cao
+
+
+
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
